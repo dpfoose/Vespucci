@@ -307,8 +307,9 @@ unix:!macx{
     LIBS += -L$$PWD/../../Vespucci_dependencies/armadillo/lib -larmadillo
     PRE_TARGETDEPS += $$PWD/../../Vespucci_dependencies/armadillo/lib/libarmadillo.a
 
-    LIBS += -L/usr/lib/ -lhdf5
-    LIBS += -L/usr/lib/ -lhdf5_cpp
+    LIBS += -L$$PWD/usr/lib/ -lhdf5
+    LIBS += -L$$PWD/usr/lib/ -lhdf5_cpp
+
     LIBS += -L/usr/lib -lblas
     LIBS += -L/usr/lib -llapack
 
@@ -330,7 +331,7 @@ unix:!macx{
 
     LIBS += -L$$PWD/../../Vespucci_dependencies/yaml-cpp/lib -lyaml-cpp
     PRE_TARGETDEPS += $$PWD/../../Vespucci_dependencies/yaml-cpp/lib/libyaml-cpp.a
-    
+
     LIBS += -L$$OUT_PWD/../VespucciLibrary -lvespucci
     PRE_TARGETDEPS += $$OUT_PWD/../VespucciLibrary/libvespucci.a
     LIBS += -L/usr/lib/ -lz
@@ -400,7 +401,7 @@ macx{
 
     LIBS += -L$$PWD/../../hdf5/lib/ -lhdf5_cpp
     PRE_TARGETDEPS += $$PWD/../../hdf5/lib/libhdf5_cpp.a
-    
+
     INCLUDEPATH += $$PWD/../../hdf5/include
     DEPENDPATH += $$PWD/../../hdf5/include
 

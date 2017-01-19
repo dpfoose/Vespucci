@@ -145,14 +145,10 @@ unix:!macx{
     PRE_TARGETDEPS += $$PWD/../../Vespucci_dependencies/mlpack/lib/libmlpack.a
     LIBS += -L$$PWD/../../Vespucci_dependencies/armadillo/lib -larmadillo
     PRE_TARGETDEPS += $$PWD/../../Vespucci_dependencies/armadillo/lib/libarmadillo.a
-    LIBS += -L$$PWD/../../Vespucci_dependencies/hdf5/lib -lhdf5
-    LIBS += -L$$PWD/../../Vespucci_dependencies/hdf5/lib -lhdf5_cpp
-    LIBS += -L$$PWD/../../Vespucci_dependencies/hdf5/lib -lz
-    LIBS += -L$$PWD/../../Vespucci_dependencies/hdf5/lib -lsz
-    PRE_TARGETDEPS += $$PWD/../../Vespucci_dependencies/hdf5/lib/libhdf5.a
-    PRE_TARGETDEPS += $$PWD/../../Vespucci_dependencies/hdf5/lib/libhdf5_cpp.a
-    INCLUDEPATH += $$PWD/../../Vespucci_dependencies/hdf5/include
-    DEPENDPATH += $$PWD/../../Vespucci_dependencies/hdf5/include
+
+    LIBS += -L$$PWD/usr/lib/ -lhdf5
+    LIBS += -L$$PWD/usr/lib/ -lhdf5_cpp
+
     LIBS += -L/usr/lib -lblas
     LIBS += -L/usr/lib -llapack
 
