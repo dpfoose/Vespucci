@@ -23,7 +23,7 @@
 #if !defined( SWIG )
     // SWIG should not see #inlcude<armadillo> as it can not handle it
     #include <mlpack/core.hpp>
-    #include "Global/libvespucci.h"
+    #include "libvespucci.h"
 #endif
 #include <map>
 
@@ -59,7 +59,7 @@ namespace TextImport
                                      arma::vec &abscissa,
                                      arma::vec &x, arma::vec &y);
 
-    VESPUCCI_EXPORT bool CheckFileValidity(QString filename, bool &comma_decimals);
+    VESPUCCI_EXPORT bool CheckFileValidity(std::string filename, bool &comma_decimals);
 
     VESPUCCI_EXPORT void GenerateSpatialData(double x_start,
                                              double y_start,
